@@ -17,9 +17,9 @@
       <tbody>
         <% @products.each do |product| %>
           <tr>
-              <td><%=product.name %> </td>
+              <td><%=link_to product.name, product %> </td>
               <td>$<%=product.price.round(2) %></td>
-              <td>PUT COMPANY I BELONG TO HERE</td>
+              <td><%= product.company.name %></td>
               <td>LINK TO REVIEW PRODUCT HERE</td>
          </tr>
             <% end %>

@@ -10,8 +10,23 @@ class ProductsController < ApplicationController
 
 
     def create
+      @product = Product.new(product_params)
+      if @product.save
+        redirect_to @product
+      else
+        render "new"
+      end
+    end
 
-      ### create a product here.
+def show
+  @product = Product.find(params[:id])
+end
+
+
+    private
+
+    def product_params
+      params.require(:product).permit(:name, :price, :company_id)
     end
 
 end

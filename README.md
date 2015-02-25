@@ -1,17 +1,9 @@
-#### Modeling Practice
-
-bundle
-
-rake db:create db:migrate db:seed
-
 Data model: Look at Schema
-
 No need to create migrations or alter the schema.
 
 ###### Stories
 
 - The last dev team left this app mid build. It is a review website for products and companies.
-
 - Don't worry about Edit pages.
 
 - The Authentication/Session controller is very basic with no password for authentication. Don't worry about this. It is there to add the current_user's ID to the review they are writing.
